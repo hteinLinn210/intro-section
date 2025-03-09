@@ -18,7 +18,7 @@ const Header = () => {
                Get your team in sync, no matter your location. Streamline processes,
                create team rituals, and watch productivity soar.
             </p>
-            <button className='px-6 py-4 bg-black text-white rounded-xl'>
+            <button className='px-6 py-4 bg-black text-white rounded-xl hover:bg-transparent border hover:border-black hover:text-black cursor-pointer'>
                Learn more
             </button>
             <div className='flex justify-between items-start w-full mt-4'>
