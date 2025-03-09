@@ -3,7 +3,7 @@ import { assets } from '../assets/assets';
 
 const Header = () => {
    return (
-      <section className='mt-20 md:mt-28 text-center md:text-left container w-full mx-auto flex flex-col gap-8 items-center md:flex-row-reverse md:justify-between md:px-12 lg:px-32'>
+      <section className='mt-20 md:mt-auto text-center md:text-left container w-full mx-auto h-screen flex flex-col gap-8 items-center md:flex-row-reverse md:justify-between md:px-12 lg:px-32'>
          <div className='md:hidden'>
             <img src={assets.HeroImgMobile} alt='' />
          </div>
