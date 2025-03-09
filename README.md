@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](completed.jpeg)
+![](/public/completed.jpeg)
 
 ### Links
 
