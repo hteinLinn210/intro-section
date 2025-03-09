@@ -21,11 +21,14 @@ const Navbar = () => {
    }, []);
 
    return (
-      <nav className='container absolute top-0 left-0 right-0 w-full mx-auto h-20 flex justify-between items-center text-gray-500 z-10 px-4'>
+      <nav
+         role='navigation'
+         className='container absolute top-0 left-0 right-0 w-full mx-auto h-20 flex justify-between items-center text-gray-500 z-10 px-4'
+      >
          <div className='flex gap-15'>
             <img src={assets.LogoIcon} alt='Brand Logo' />
             <ul className='gap-8 hidden md:flex'>
-               <div
+               <li
                   className='relative'
                   onMouseEnter={() => setFeatureLinkOpen(true)}
                   onMouseLeave={() => setFeatureLinkOpen(false)}
@@ -58,8 +61,8 @@ const Navbar = () => {
                         </a>
                      </div>
                   )}
-               </div>
-               <div
+               </li>
+               <li
                   className='relative'
                   onMouseEnter={() => setCompanyLinkOpen(true)}
                   onMouseLeave={() => setCompanyLinkOpen(false)}
@@ -85,13 +88,17 @@ const Navbar = () => {
                         </a>
                      </div>
                   )}
-               </div>
-               <a href='#' className='hover:text-black'>
-                  Careers
-               </a>
-               <a href='#' className='hover:text-black'>
-                  About
-               </a>
+               </li>
+               <li>
+                  <a href='#' className='hover:text-black'>
+                     Careers
+                  </a>
+               </li>
+               <li>
+                  <a href='#' className='hover:text-black'>
+                     About
+                  </a>
+               </li>
             </ul>
          </div>
          <div className='space-x-8 hidden md:block'>
@@ -136,60 +143,67 @@ const Navbar = () => {
             </div>
             <ul className='flex flex-col items-start gap-4'>
                {/* Features */}
-               <button
-                  onClick={() => setFeatureLinkOpen((prevLink) => !prevLink)}
-                  className='flex items-center'
-               >
-                  Features
-                  {featureLinkOpen ? (
-                     <assets.ArrowUpIcon className='inline ml-2' />
-                  ) : (
-                     <assets.ArrowDownIcon className='inline ml-2' />
+               <li>
+                  <button
+                     onClick={() => setFeatureLinkOpen((prevLink) => !prevLink)}
+                     className='flex items-center'
+                  >
+                     Features
+                     {featureLinkOpen ? (
+                        <assets.ArrowUpIcon className='inline ml-2' />
+                     ) : (
+                        <assets.ArrowDownIcon className='inline ml-2' />
+                     )}
+                  </button>
+                  {featureLinkOpen && (
+                     <div className='px-4 space-y-4 mt-4'>
+                        <a href='' className='flex gap-2'>
+                           <assets.TodoIcon />
+                           Todo List
+                        </a>
+                        <a href='' className='flex gap-2'>
+                           <assets.CalendarIcon />
+                           Calender
+                        </a>
+                        <a href='' className='flex gap-2'>
+                           <assets.ReminderIcon />
+                           Remainder
+                        </a>
+                        <a href='' className='flex gap-2'>
+                           <assets.PlanningIcon />
+                           Planning
+                        </a>
+                     </div>
                   )}
-               </button>
-               {featureLinkOpen && (
-                  <div className='px-4 space-y-4'>
-                     <a href='' className='flex gap-2'>
-                        <assets.TodoIcon />
-                        Todo List
-                     </a>
-                     <a href='' className='flex gap-2'>
-                        <assets.CalendarIcon />
-                        Calender
-                     </a>
-                     <a href='' className='flex gap-2'>
-                        <assets.ReminderIcon />
-                        Remainder
-                     </a>
-                     <a href='' className='flex gap-2'>
-                        <assets.PlanningIcon />
-                        Planning
-                     </a>
-                  </div>
-               )}
+               </li>
 
                {/* Company */}
-               <button
-                  onClick={() => setCompanyLinkOpen((prevLink) => !prevLink)}
-                  className='flex items-center'
-               >
-                  Company
-                  {companyLinkOpen ? (
-                     <assets.ArrowUpIcon className='inline ml-2' />
-                  ) : (
-                     <assets.ArrowDownIcon className='inline ml-2' />
+               <li>
+                  <button
+                     onClick={() => setCompanyLinkOpen((prevLink) => !prevLink)}
+                     className='flex items-center'
+                  >
+                     Company
+                     {companyLinkOpen ? (
+                        <assets.ArrowUpIcon className='inline ml-2' />
+                     ) : (
+                        <assets.ArrowDownIcon className='inline ml-2' />
+                     )}
+                  </button>
+                  {companyLinkOpen && (
+                     <div className='px-4 gap-4 flex flex-col mt-4'>
+                        <a href=''>History</a>
+                        <a href=''>Our Team</a>
+                        <a href=''>Blog</a>
+                     </div>
                   )}
-               </button>
-               {companyLinkOpen && (
-                  <div className='px-4 gap-4 flex flex-col'>
-                     <a href=''>History</a>
-                     <a href=''>Our Team</a>
-                     <a href=''>Blog</a>
-                  </div>
-               )}
-
-               <a href='#'>Careers</a>
-               <a href='#'>About</a>
+               </li>
+               <li>
+                  <a href='#'>Careers</a>
+               </li>
+               <li>
+                  <a href='#'>About</a>
+               </li>
             </ul>
             <div className='flex flex-col items-center gap-4 mt-8'>
                <a href='#' className='hover:text-black'>
