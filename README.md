@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
--  Solution URL: [Add solution URL here](https://github.com/hteinLinn210/intro-section)
--  Live Site URL: [Add live site URL here](https://transcendent-pasca-19cebc.netlify.app/)
+-  Solution URL: [https://github.com/hteinLinn210/intro-section]
+-  Live Site URL: [https://transcendent-pasca-19cebc.netlify.app/]
 
 ## My process
 
